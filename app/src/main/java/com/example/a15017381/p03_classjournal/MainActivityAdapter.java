@@ -28,16 +28,16 @@ public class MainActivityAdapter extends ArrayAdapter<Module> {
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View rowView = inflater.inflate(R.layout.row_main, parent, false);
+        View row = inflater.inflate(R.layout.row_main, parent, false);
 
-        tvModuleCode = (TextView) rowView.findViewById(R.id.textViewModuleCode);
-        tvModuleName = (TextView)rowView.findViewById(R.id.textViewModuleName);
+        tvModuleCode = (TextView) row.findViewById(R.id.textViewModuleCode);
+        tvModuleName = (TextView)row.findViewById(R.id.textViewModuleName);
 
         Module currentModule = module.get(position);
 
         tvModuleCode.setText(currentModule.getCode());
         tvModuleName.setText(currentModule.getName());
 
-        return rowView;
+        return row;
     }
 }

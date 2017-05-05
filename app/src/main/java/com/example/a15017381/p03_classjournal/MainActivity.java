@@ -32,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
         al.add(new Module("C302", "Web Services"));
         al.add(new Module("C347", "Android Programming II"));
 
-
         aa = new MainActivityAdapter(this, R.layout.row_main, al);
         lvModule.setAdapter(aa);
 
